@@ -1,2 +1,2 @@
-# PONG_meets_IOTA
+# PONG_IOTA
 Micropayments PoC
