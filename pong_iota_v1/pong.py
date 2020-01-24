@@ -947,53 +947,6 @@ def clear_select_shop_cat_5():
         TextRect.center = ((width*0.75),(height*0.7))
         screen.blit(TextSurf, TextRect)
 
-
-def start_multiplayer():
-    global client
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.connect(("159.69.197.98", 5555))
-
-    screen.fill(black)
-    largeText = pygame.font.Font('freesansbold.ttf',20)
-    TextSurf, TextRect = text_objects("PONGIOTA Multiplayer Instructions", largeText)
-    TextRect.center = ((width/2),(40))
-    screen.blit(TextSurf, TextRect)
-    largeText = pygame.font.Font('freesansbold.ttf',15)
-    TextSurf, TextRect = text_objects("Enter your Opponents ID into the Terminal", largeText)
-    TextRect.center = ((width/2),(40+50))
-    screen.blit(TextSurf, TextRect)
-    pygame.display.update()
-    pygame.event.get()
-    opponent_id = str(raw_input("Opponent ID:"))
-    print opponent_id
-    sockets_list = [sys.stdin, server]
-
-    read_sockets,write_socket, error_socket = select.select(sockets_list,[],[])
-
-    thread.start_new_thread(start_multiplayer_server, (opponent_id,server, ) )
-    screen.fill(black)
-    clock.tick(FPS)
-    largeText = pygame.font.Font('freesansbold.ttf',20)
-    TextSurf, TextRect = text_objects("PONGIOTA Multiplayer Instructions", largeText)
-    TextRect.center = ((width/2),(40))
-    screen.blit(TextSurf, TextRect)
-    largeText = pygame.font.Font('freesansbold.ttf',15)
-    TextSurf, TextRect = text_objects("waiting for Opponent..", largeText)
-    TextRect.center = ((width/2),(40+50))
-    screen.blit(TextSurf, TextRect)
-    pygame.display.update()
-    pygame.event.get()
-    while client == False:
-        print client
-        time.sleep(1)
-    largeText = pygame.font.Font('freesansbold.ttf',15)
-    TextSurf, TextRect = text_objects("Opponent found!", largeText)
-    TextRect.center = ((width/2),(40+50))
-    screen.blit(TextSurf, TextRect)
-    pygame.display.update()
-    pygame.event.get()
-    time.sleep(5)
-
 def main():
     game_intro()
     game_menu()
