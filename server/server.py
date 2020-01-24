@@ -15,7 +15,6 @@ server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
   
 IP_address = "0.0.0.0"
   
-# takes second argument from command prompt as port number 
 Port = 5555 
 server.bind((IP_address, Port)) 
   
