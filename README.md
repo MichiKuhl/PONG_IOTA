@@ -9,7 +9,6 @@ pip install pyota[ccurl]
 ```
 ### How to start
 ```
-wget https://github.com/MichiKuhl/PONG_IOTA.git
-cd 
+git clone https://github.com/MichiKuhl/PONG_IOTA.git
 cd pong_iota_v1
 
