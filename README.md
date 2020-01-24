@@ -1,7 +1,7 @@
 # PONG_IOTA
 Micropayments PoC
 
-###Info
+### Info
 This is a small side-project of mine. It should be a small example of how Microtransactions can work. 
 If you want to test it without any value payments, just change the payment values in the python.py file. 
 
