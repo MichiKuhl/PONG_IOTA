@@ -2,7 +2,7 @@
 Micropayments PoC
 
 ### Info
-This is a small side-project of mine. It should be a small example of how Microtransactions can work. 
+This is a small side-project of mine. My intention was to show how micropayments can work in a gaming environement. 
 If you want to test it without any value payments, just change the payment values in the python.py file. 
 
 This game is tested with Python2.7
