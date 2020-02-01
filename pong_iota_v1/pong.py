@@ -44,7 +44,7 @@ toggle16 = toggle17 = toggle18 = False
 client = False
 
 node = "https://papa.iota.family:14267"
-pong_server= "159.69.197.98"
+pong_server= "XXX.XXX.XXX.XXX" #YOUR PONG SERVER-IP
 pong_port = 5555
 scr_size = (width,height) = (600,400)
 clock = pygame.time.Clock()
