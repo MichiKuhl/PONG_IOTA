@@ -13,7 +13,7 @@ seed = "SEED9SEED9SEED9"
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) 
   
-IP_address = "0.0.0.0"
+IP_address = "127.0.0.1"
   
 Port = 5555 
 server.bind((IP_address, Port)) 
